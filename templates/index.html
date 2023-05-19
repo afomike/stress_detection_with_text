@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stresspage</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div align="center" class="header">
+        <p>Stress Detection with text</p>
+    </div>
+    <form id="text" action="{{ url_for('main') }}" method="POST">
+        <div align="center" class="mainContainer">
+          <label  for="inputtext">
+            Enter text:
+
+          </label><br><br>
+          <input name="inputtext" id="inputtext" 
+          
+            required></input> <br><br>
+            
+          <input type="submit" class="btn" value="Submit" >
+          
+    </form>
+    </div>
+    <div  align="center" class="show_pre">
+        <span>{{ prediction_text }}</span> <br>
+        <span>{{ result }}</span>
+      </div>
+                    
+</body>
+</html>
